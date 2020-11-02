@@ -1,0 +1,13 @@
+# Press up-arrow for previous matching command
+"\e[A":history-search-backward
+# Press down-arrow for next matching command
+"\e[B":history-search-forward
+
+"\e[1~": beginning-of-line     # Home key
+"\e[4~": end-of-line           # End key
+"\e[5~": beginning-of-history  # PageUp key
+"\e[6~": end-of-history        # PageDown key
+"\e[3~": delete-char           # Delete key
+"\e[2~": quoted-insert         # Insert key
+"\eOD": backward-word          # Ctrl + Left Arrow key
+"\eOC": forward-word           # Ctrl + Right Arrow key
