@@ -212,6 +212,7 @@ set vb t_vb=
 " remove spaces
 map <F2> : <esc>:nohlsearch<CR>
 map <F3> : <esc>:%s/\([^ \t]\)[ \t]*$/\1/g<CR>:%s/^[ \t]*$//g<CR>
+map <F4> : <esc>:%s/\([^ \t]\)[ \t]*$/\1/g<CR>:%s/^[ \t]*$//g<CR>
 
 " pretty json
 nnoremap <buffer><Leader>pj :%!python -m json.tool<CR>
