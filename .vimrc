@@ -166,9 +166,12 @@ set t_Co=256
 
 " highlight current line and character under cursor
 set cursorline
-highlight CursorLine term=bold cterm=bold
+highlight CursorLine term=bold cterm=bold ctermbg=008
 highlight Cursor term=reverse cterm=reverse
 highlight Visual term=bold,reverse cterm=bold,reverse
+
+" remove underline for line number
+highlight CursorLineNr term=bold cterm=bold ctermfg=011 ctermbg=008 gui=bold
 
 " tab setting
 set softtabstop=4
