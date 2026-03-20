@@ -123,6 +123,21 @@ alias ....='cd ../../..'
 alias rp='realpath'
 alias his='history'
 alias sl='ls'
+alias ptt='luit -encoding big5 telnet ptt.cc'
+
+alias m='cd /mnt/c/Users/Murphy/'
+
+alias exp='cd /m/murphy/ares/exp/scripts/'
+alias hera='cd ~/git/builder/repos/kronos_hera-src/'
+alias troops='cd /m/murphy/git/hera-troops/scripts/'
+alias utils='cd ~/git/hera-utils/scripts/'
+alias basis='cd ~/git/basis-spread/'
+alias alpha_utils='cd /m/murphy/git/alpha-utils/scripts/'
+
+alias open='explorer.exe'
+
+# M
+export M="/mnt/c/Users/Murphy"
 
 # avoid duplicates..
 export HISTCONTROL=ignoredups:erasedups
@@ -136,9 +151,32 @@ shopt -s histappend
 # After each command, save and reload history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+# telegram bot
+export EROS_ARROW_TELEGRAM_TOKEN="961816111:AAEhGcNhEdxYKLEaDwFJvIhz8_TbMkI6cZI"
+export KRONOS_LISTING_BOT_TELEGRAM_TOKEN="6736192779:AAFXhvRwuIuqNg3U7DQ25svriqvOGNgvu0E"
 
+# go
+export PATH=$PATH:/usr/local/go/bin
 
+# python
+export PYTHONPATH="${PYTHONPATH}:/m/ares/git/common_py"
+
+# 256color
+export TERM="xterm-256color"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# allow group write
+umask 002
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# OpenClaw Completion
+source "/home/murphy/.openclaw/completions/openclaw.bash"
